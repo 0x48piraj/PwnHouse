@@ -6,7 +6,7 @@ Collection of home-made exploit PoC (proof of concept) for public CVE.
 
 ## Contents
 
-- OSVDB-73573 (#OSVDB-73573)
+- [OSVDB-73573](#osvdb-73573)
 
 ## Resource
 
