@@ -10,6 +10,7 @@ import argparse
 # Author : Piyush Raj <0x48piraj>                             #
 # Vuln   : Ingreslock backdoor (on port 1524)                 #
 ###############################################################
+# http://www.di-srv.unisa.it/~ads/corso-security/www/CORSO-0203/Scansione_servizi_rete/SAINT_DOCS/tutorials/vulnerability/Vulnerability_Exploits.html
 
 parser = argparse.ArgumentParser(description='Ingreslock backdoor on port 1524')
 optional = parser._action_groups.pop() # popped opt args
