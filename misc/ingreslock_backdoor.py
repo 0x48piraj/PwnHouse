@@ -15,7 +15,7 @@ import argparse
 parser = argparse.ArgumentParser(description='Ingreslock backdoor on port 1524')
 optional = parser._action_groups.pop() # popped opt args
 required_opts = parser.add_argument_group('Required Parameters')
-required_opts.add_argument("--target-ip", dest="target" help= "IP Address of the vulnerable machine", required=True)
+required_opts.add_argument("--target-ip", dest="target", help= "IP Address of the vulnerable machine", required=True)
 optional.add_argument("--target-port", dest="port", default=1524, type=int, help= "Port Address of the vulnerable running service")
 
 target, port = parser.parse_args().target, parser.parse_args().port
