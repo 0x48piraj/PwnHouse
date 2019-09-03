@@ -1,0 +1,1 @@
+process.mainModule.require('child_process').exec('calc') // pop win calc
