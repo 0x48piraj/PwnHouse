@@ -2,7 +2,7 @@
 
 #### Description
 
-Collection of home-made exploit PoC (proof of concept) for public CVE.
+Collection of hand-crafted exploit PoCs (proof-of-concepts) for public Common Vulnerabilities and Exposures (CVE), 1-day vulnerabilities & maybe 0-days.
 
 ## Contents
 
