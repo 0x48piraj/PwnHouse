@@ -4,4 +4,4 @@ Adobe has a feature called "Remote Connections" which is used for various purpos
 
 The bug is, if the Remote Connection setting is enabled, then, we can execute arbitrary javascript code on Photoshop instance and for getting RCE, we have undocumented function called `app.system` (https://forums.adobe.com/thread/2300740)
 
-The proof-of-concept doesn't work for now, but, I'll fiddle around in my spare time.
+The proof-of-concept doesn't work for now, but, I'll fiddle around in my spare time. (https://github.com/adobe-photoshop/generator-core)
