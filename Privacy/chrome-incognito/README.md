@@ -1,10 +1,10 @@
 # Research on Chrome's Incognito Mode
 
-## Extension Resources Block Attack (res-block)
+### Extension Resources Block Attack (res-block)
 
 This attack can be used to detect if victim is using Incognito mode in latest version of Chrome (77.0.3865.90) or not. Discovered by @0x48piraj
 
-### Anatomy of res-block attack
+#### Anatomy of res-block attack
 
 Sometimes developers share package resources of their Chrome extension, for example, images, HTML, CSS, or JavaScript and make them available to web pages. They do this via utilizing `web_accessible_resources`
 
@@ -53,17 +53,17 @@ Let's test this with **Wappalyzer chrome-extension** as I know it has "web_acces
 
 The path seems to be `js/inject.js`, now to find the [PACKAGE ID], we can just visit `chrome://extensions`, switch to **Developer mode**, see extensive details about extensions.
 
-![](static/chrome-extensions-dev-mode.png)
+![](resblock/static/chrome-extensions-dev-mode.png)
 
 **NOTE:** As the [PACKAGE ID] is contant through-out, it is a **reliable attack vector**. 
 
 Final Payload : `chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/inject.js`
 
 
-![](static/resource_accessible.png)
+![](resblock/static/resource_accessible.png)
 
 As expected, now, let's test this over Incognito mode,
 
-![](static/resources_blocked.png)
+![](resblock/static/resources_blocked.png)
 
 Aha! It shows an error with code `ERR_BLOCKED_BY_CLIENT` or say, `Failed to load resource: net::ERR_BLOCKED_BY_CLIENT`
