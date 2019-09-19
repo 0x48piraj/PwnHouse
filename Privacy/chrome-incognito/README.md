@@ -2,7 +2,7 @@
 
 ### Extension Resources Block Attack (res-block)
 
-This attack can be used to detect if victim is using Incognito mode in latest version of Chrome (77.0.3865.90) or not. Discovered by @0x48piraj
+This attack can be used to detect if victim is using Incognito mode in latest version of Chrome (77.0.3865.90) or not by abusing `web_accessible_resources`. Discovered by [@0x48piraj](https://twitter.com/0x48piraj)
 
 #### Anatomy of res-block attack
 
@@ -101,3 +101,7 @@ The chrome-extensions which have web accessible resources:
 - **Chrome Media Router (Chromecast™) Extension** ([resblock/vuln-manifests/chromecast-manifest.json](resblock/vuln-manifests/chromecast-manifest.json))
 
 You can find the final proof-of-concept exploit over [here](resblock/res-block-poc.html)
+
+### Demo
+
+![Demo](resblock/static/demo.gif)
