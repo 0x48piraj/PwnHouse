@@ -1,0 +1,774 @@
+<!doctype html>
+<html dir="ltr"
+hascustombackground="false"
+bookmarkbarattached="false"
+lang="en"
+class="md">
+<head>
+<meta charset="utf-8">
+<title>New Tab</title>
+<meta name="viewport" content="width=device-width">
+<style>
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+html {
+  direction: ltr;
+}
+body {
+  font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+  font-size: 81.25%;
+  background-color: rgb(50, 54, 57);
+}
+button {
+  font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+-webkit-font-smoothing: antialiased;
+font-size: 100%;
+margin: 0;
+}
+.content {
+background-color: rgb(50, 54, 57);
+color: rgb(232, 234, 237);
+font-size: calc(100% - 2px);
+line-height: calc(100% + 6px);
+min-width: 240px;
+}
+h1 {
+font-size: calc(100% + 8px);
+font-weight: 400;
+line-height: calc(100% + 8px);
+}
+em {
+color: white;
+font-style: normal;
+}
+.learn-more-button {
+color: rgb(138, 180, 248);
+text-decoration: none;
+}
+@media (max-width: 240px),
+(max-height: 320px) {
+.content {
+font-size: calc(100% - 4px);
+line-height: calc(100% + 6px);
+}
+h1 {
+font-size: calc(100% + 4px);
+line-height: calc(100% + 4px);
+}
+}
+.icon {
+content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDAgMjQwIj48ZyBvcGFjaXR5PSIuOCIgZmlsbD0iI0ZGRiI+PHBhdGggZD0iTTEyMSAwQzUzLjktLjYtLjYgNTMuOSAwIDEyMWMuNiA2NS4yIDUzLjggMTE4LjQgMTE5IDExOSA2Ny4xLjYgMTIxLjYtNTMuOSAxMjEtMTIxQzIzOS40IDUzLjggMTg2LjIuNiAxMjEgMHpNOTAuNSA1OWMuMy0uOSAxLTEuNSAyLjItMS4yIDIuMi41IDE5LjkgNC4zIDE5LjkgNC4zczM2LjgtNS42IDM4LjEtNS45YzEuMS0uMiAxLjkuNCAyLjEgMS40LjEuNCA2LjMgMjEuMyAxMS43IDM5LjVINzguM0M4My45IDc5LjYgOTAuMSA2MCA5MC41IDU5em04NS45IDEwMy4zYy0uOCAxMi4yLTEwLjcgMjIuMS0yMi45IDIyLjktMTQuMy45LTI2LjEtMTAuNC0yNi4xLTI0LjUgMC0uNyAwLTEuNC4xLTIuMS0yLS43LTQuMi0xLTYuNC0xLTIuMyAwLTQuNS40LTYuNyAxLjEuMS43LjEgMS4zLjEgMiAwIDE0LjEtMTEuOCAyNS40LTI2LjEgMjQuNS0xMi4yLS44LTIyLjEtMTAuNy0yMi45LTIyLjktLjgtMTQuMiAxMC41LTI2LjEgMjQuNS0yNi4xIDEwLjIgMCAxOSA2LjMgMjIuNyAxNS4yIDIuNy0uOCA1LjUtMS4zIDguNC0xLjMgMi44IDAgNS41LjQgOC4xIDEuMiAzLjctOC45IDEyLjQtMTUuMSAyMi43LTE1LjEgMTQuMSAwIDI1LjQgMTEuOSAyNC41IDI2LjF6bTIzLjQtMzQuM0g0Mi40Yy0uMiAwLS4zLS4zLS4xLS40IDUuMi0yLjcgMzUuNC0xNy42IDc5LTE3LjYgNDMuNyAwIDczLjUgMTQuOCA3OC42IDE3LjYuMi4xLjEuNC0uMS40eiIvPjxjaXJjbGUgY3g9IjE1MS45IiBjeT0iMTYwLjgiIHI9IjE3LjQiLz48Y2lyY2xlIGN4PSI5MC4xIiBjeT0iMTYwLjgiIHI9IjE3LjQiLz48L2c+PC9zdmc+);
+height: 120px;
+width: 120px;
+}
+@media (max-height: 480px),
+(max-width: 720px) {
+.icon {
+height: 72px;
+width: 72px;
+}
+}
+@media (max-width: 720px) {
+@media (max-width: 240px),
+(max-height: 480px) {
+.icon {
+height: 48px;
+width: 48px;
+}
+}
+}
+.content > .learn-more-button {
+display: none;
+}
+@media (max-width: 720px) {
+#subtitle > .learn-more-button {
+display: none;
+}
+.content > .learn-more-button {
+display: block;
+}
+}
+.content {
+margin-inline-end: auto;
+margin-inline-start: auto;
+max-width: 600px;
+}
+.icon {
+margin-inline-end: auto;
+margin-inline-start: auto;
+}
+h1 {
+text-align: center;
+}
+#bulletpoints-wrapper {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.bulletpoints {
+flex-basis: 285px;
+flex-grow: 1;
+flex-shrink: 0;
+}
+.bulletpoints.first {
+margin-inline-end: 30px;
+}
+@media (max-width: 720px) {
+.content {
+max-width: 600px !important;
+text-align: start;
+}
+.icon {
+margin-inline-start: 0;
+}
+h1 {
+text-align: start;
+}
+}
+.bulletpoints ul {
+margin: 4px 0 0;
+padding-inline-start: 16px;
+}
+@media (min-width: 720px) {
+.icon,
+h1,
+#subtitle,
+.learn-more-button {
+margin-top: 1.5rem;
+}
+.icon,
+h1,
+#subtitle,
+.bulletpoints {
+margin-bottom: 1.5rem;
+}
+.content {
+margin-top: 40px;
+min-width: 240px;
+padding: 8px 48px 24px;
+}
+@media (max-height: 480px) {
+html,
+body,
+.content {
+height: 100%;
+}
+.content {
+margin-bottom: 0;
+margin-top: 0;
+padding-bottom: 0;
+padding-top: 0;
+}
+.icon {
+margin-top: 0;
+padding-top: 32px;
+}
+}
+@media (max-height: 320px) {
+h1,
+#subtitle {
+margin-bottom: 16px;
+margin-top: 16px;
+}
+
+.learn-more-button,
+.bulletpoints,
+.icon {
+margin-bottom: 16px;
+}
+}
+}
+@media (max-width: 720px) {
+.content {
+min-width: 176px;
+padding: 72px 32px;
+}
+.icon,
+h1,
+#subtitle {
+margin-bottom: 1.5rem;
+margin-top: 1.5rem;
+}
+
+.bulletpoints,
+.learn-more-button {
+margin-bottom: 1.5rem;
+}
+@media (max-height: 600px) {
+.content {
+padding-top: 48px;
+}
+.icon,
+h1,
+#subtitle {
+margin-bottom: 1rem;
+margin-top: 1rem;
+}
+.bulletpoints,
+.learn-more-button {
+margin-bottom: 1rem;
+}
+}
+@media (max-height: 480px) {
+.content {
+padding-top: 32px;
+}
+}
+.icon {
+margin-top: 0;
+}
+.learn-more-button {
+margin-bottom: 0;
+}
+}
+@media (max-width: 240px) {
+.content {
+min-width: 192px;
+padding-inline-end: 24px;
+padding-inline-start: 24px;
+}
+}
+</style>
+</head>
+<body>
+<div class="content">
+<div class="icon" role="presentation" alt=""></div>
+<h1>You’ve gone incognito, but you're not hidden</h1>
+<p id="subtitle">
+<span>Now you can browse openly, and the whole world will see your activity. Obviously, everything will be saved.</span>
+<a class="learn-more-button"
+href="https://github.com/0x48piraj/PwnHouse/Privacy/chrome-incognito">Learn more</a>
+</p>
+<div id="bulletpoints-wrapper">
+<div class="bulletpoints first">We <em>will save</em> the following information:
+<ul>
+<li>Your browsing history (Etag)
+<li>All your data (browser-fingerprinting)
+<li>Information entered in forms (maybe not)
+</ul></div>
+<div class="bulletpoints">Your activity <em>is still visible</em> to:
+<ul>
+<li>Us, not U.S., or maybe ...
+<li>Google, Facebook, Amazon and every company you can think of.
+<li>Basically the whole internet
+</ul></div>
+</div>
+<a class="learn-more-button" href="https://support.google.com/chrome/?p=incognito">Learn more</a>
+</div>
+<script>
+var WebUIListener;
+var cr = cr || function(global) {
+  'use strict';
+  function exportPath(name, opt_object, opt_objectToExportTo) {
+    const parts = name.split('.');
+    let cur = opt_objectToExportTo || global;
+
+    for (let part; parts.length && (part = parts.shift());) {
+      if (!parts.length && opt_object !== undefined) {
+        // last part and we have an object; use it
+        cur[part] = opt_object;
+      } else if (part in cur) {
+        cur = cur[part];
+      } else {
+        cur = cur[part] = {};
+      }
+    }
+    return cur;
+  }
+  function dispatchPropertyChange(target, propertyName, newValue, oldValue) {
+    const e = new Event(propertyName + 'Change');
+    e.propertyName = propertyName;
+    e.newValue = newValue;
+    e.oldValue = oldValue;
+    target.dispatchEvent(e);
+  }
+  function getAttributeName(jsName) {
+    return jsName.replace(/([A-Z])/g, '-$1').toLowerCase();
+  }
+  const PropertyKind = {
+    JS: 'js',
+    ATTR: 'attr',
+    BOOL_ATTR: 'boolAttr'
+  };
+  function getGetter(name, kind) {
+    let attributeName;
+    switch (kind) {
+      case PropertyKind.JS:
+        const privateName = name + '_';
+        return function() {
+          return this[privateName];
+        };
+      case PropertyKind.ATTR:
+        attributeName = getAttributeName(name);
+        return function() {
+          return this.getAttribute(attributeName);
+        };
+      case PropertyKind.BOOL_ATTR:
+        attributeName = getAttributeName(name);
+        return function() {
+          return this.hasAttribute(attributeName);
+        };
+    }
+    throw 'not reached';
+  }
+  function getSetter(name, kind, opt_setHook) {
+    let attributeName;
+    switch (kind) {
+      case PropertyKind.JS:
+        const privateName = name + '_';
+        return function(value) {
+          const oldValue = this[name];
+          if (value !== oldValue) {
+            this[privateName] = value;
+            if (opt_setHook) {
+              opt_setHook.call(this, value, oldValue);
+            }
+            dispatchPropertyChange(this, name, value, oldValue);
+          }
+        };
+
+      case PropertyKind.ATTR:
+        attributeName = getAttributeName(name);
+        return function(value) {
+          const oldValue = this[name];
+          if (value !== oldValue) {
+            if (value == undefined) {
+              this.removeAttribute(attributeName);
+            } else {
+              this.setAttribute(attributeName, value);
+            }
+            if (opt_setHook) {
+              opt_setHook.call(this, value, oldValue);
+            }
+            dispatchPropertyChange(this, name, value, oldValue);
+          }
+        };
+
+      case PropertyKind.BOOL_ATTR:
+        attributeName = getAttributeName(name);
+        return function(value) {
+          const oldValue = this[name];
+          if (value !== oldValue) {
+            if (value) {
+              this.setAttribute(attributeName, name);
+            } else {
+              this.removeAttribute(attributeName);
+            }
+            if (opt_setHook) {
+              opt_setHook.call(this, value, oldValue);
+            }
+            dispatchPropertyChange(this, name, value, oldValue);
+          }
+        };
+    }
+
+    throw 'not reached';
+  }
+
+  function defineProperty(obj, name, opt_kind, opt_setHook) {
+    if (typeof obj == 'function') {
+      obj = obj.prototype;
+    }
+
+    const kind = (opt_kind || PropertyKind.JS);
+
+    if (!obj.__lookupGetter__(name)) {
+      obj.__defineGetter__(name, getGetter(name, kind));
+    }
+
+    if (!obj.__lookupSetter__(name)) {
+      obj.__defineSetter__(name, getSetter(name, kind, opt_setHook));
+    }
+  }
+
+  let uidCounter = 1;
+
+  function createUid() {
+    return uidCounter++;
+  }
+
+  function dispatchSimpleEvent(target, type, opt_bubbles, opt_cancelable) {
+    const e = new Event(type, {
+      bubbles: opt_bubbles,
+      cancelable: opt_cancelable === undefined || opt_cancelable
+    });
+    return target.dispatchEvent(e);
+  }
+
+  function define(name, fun) {
+    const obj = exportPath(name);
+    const exports = fun();
+    for (const propertyName in exports) {
+      const propertyDescriptor =
+          Object.getOwnPropertyDescriptor(exports, propertyName);
+      if (propertyDescriptor) {
+        Object.defineProperty(obj, propertyName, propertyDescriptor);
+      }
+    }
+  }
+
+  function addSingletonGetter(ctor) {
+    ctor.getInstance = function() {
+      return ctor.instance_ || (ctor.instance_ = new ctor());
+    };
+  }
+  const chromeSendResolverMap = {};
+
+  function webUIResponse(id, isSuccess, response) {
+    const resolver = chromeSendResolverMap[id];
+    delete chromeSendResolverMap[id];
+
+    if (isSuccess) {
+      resolver.resolve(response);
+    } else {
+      resolver.reject(response);
+    }
+  }
+
+  function sendWithPromise(methodName, var_args) {
+    const args = Array.prototype.slice.call(arguments, 1);
+    const promiseResolver = new PromiseResolver();
+    const id = methodName + '_' + createUid();
+    chromeSendResolverMap[id] = promiseResolver;
+    chrome.send(methodName, [id].concat(args));
+    return promiseResolver.promise;
+  }
+
+  const webUIListenerMap = {};
+
+
+  function webUIListenerCallback(event, var_args) {
+    const eventListenersMap = webUIListenerMap[event];
+    if (!eventListenersMap) {
+      return;
+    }
+
+    const args = Array.prototype.slice.call(arguments, 1);
+    for (const listenerId in eventListenersMap) {
+      eventListenersMap[listenerId].apply(null, args);
+    }
+  }
+
+  function addWebUIListener(eventName, callback) {
+    webUIListenerMap[eventName] = webUIListenerMap[eventName] || {};
+    const uid = createUid();
+    webUIListenerMap[eventName][uid] = callback;
+    return {eventName: eventName, uid: uid};
+  }
+
+  function removeWebUIListener(listener) {
+    const listenerExists = webUIListenerMap[listener.eventName] &&
+        webUIListenerMap[listener.eventName][listener.uid];
+    if (listenerExists) {
+      delete webUIListenerMap[listener.eventName][listener.uid];
+      return true;
+    }
+    return false;
+  }
+
+  return {
+    addSingletonGetter: addSingletonGetter,
+    define: define,
+    defineProperty: defineProperty,
+    dispatchPropertyChange: dispatchPropertyChange,
+    dispatchSimpleEvent: dispatchSimpleEvent,
+    exportPath: exportPath,
+    PropertyKind: PropertyKind,
+
+    addWebUIListener: addWebUIListener,
+    removeWebUIListener: removeWebUIListener,
+    sendWithPromise: sendWithPromise,
+    webUIListenerCallback: webUIListenerCallback,
+    webUIResponse: webUIResponse,
+
+    get doc() {
+      return document;
+    },
+
+    get isMac() {
+      return /Mac/.test(navigator.platform);
+    },
+
+    get isWindows() {
+      return /Win/.test(navigator.platform);
+    },
+    get isChromeOS() {
+      return /CrOS/.test(navigator.userAgent);
+    },
+
+    get isLinux() {
+      return /Linux/.test(navigator.userAgent);
+    },
+
+    get isAndroid() {
+      return /Android/.test(navigator.userAgent);
+    },
+
+    get isIOS() {
+      return /iPad|iPhone|iPod/.test(navigator.platform);
+    }
+  };
+}(this);
+</script>
+<script>
+
+/* #export */ function assert(condition, opt_message) {
+  if (!condition) {
+    let message = 'Assertion failed';
+    if (opt_message) {
+      message = message + ': ' + opt_message;
+    }
+    const error = new Error(message);
+    const global = function() {
+      const thisOrSelf = this || self;
+      /** @type {boolean} */
+      thisOrSelf.traceAssertionsForTesting;
+      return thisOrSelf;
+    }();
+    if (global.traceAssertionsForTesting) {
+      console.warn(error.stack);
+    }
+    throw error;
+  }
+  return condition;
+}
+
+
+/* #export */ function assertNotReached(opt_message) {
+  assert(false, opt_message || 'Unreachable code hit');
+}
+
+/* #export */ function assertInstanceof(value, type, opt_message) {
+
+  if (!(value instanceof type)) {
+    assertNotReached(
+        opt_message ||
+        'Value ' + value + ' is not a[n] ' + (type.name || typeof type));
+  }
+  return value;
+}
+
+/* #export */ function $(id) {
+  const el = document.getElementById(id);
+  return el ? assertInstanceof(el, HTMLElement) : null;
+}
+
+/* #export */ function getSVGElement(id) {
+  const el = document.getElementById(id);
+  return el ? assertInstanceof(el, Element) : null;
+}
+/* #export */ function getDeepActiveElement() {
+  let a = document.activeElement;
+  while (a && a.shadowRoot && a.shadowRoot.activeElement) {
+    a = a.shadowRoot.activeElement;
+  }
+  return a;
+}
+
+/* #export */ function parseQueryParams(location) {
+  const params = {};
+  const query = unescape(location.search.substring(1));
+  const vars = query.split('&');
+  for (let i = 0; i < vars.length; i++) {
+    const pair = vars[i].split('=');
+    params[pair[0]] = pair[1];
+  }
+  return params;
+}
+
+/* #export */ function setQueryParam(location, key, value) {
+  const query = parseQueryParams(location);
+  query[encodeURIComponent(key)] = encodeURIComponent(value);
+
+  let newQuery = '';
+  for (const q in query) {
+    newQuery += (newQuery ? '&' : '?') + q + '=' + query[q];
+  }
+
+  return location.origin + location.pathname + newQuery + location.hash;
+}
+
+/* #export */ function findAncestorByClass(el, className) {
+  return /** @type {Element} */ (findAncestor(el, function(el) {
+    return el.classList && el.classList.contains(className);
+  }));
+}
+
+/* #export */ function findAncestor(node, predicate) {
+  let last = false;
+  while (node != null && !(last = predicate(node))) {
+    node = node.parentNode;
+  }
+  return last ? node : null;
+}
+/* #export */ function disableTextSelectAndDrag(
+    opt_allowSelectStart, opt_allowDragStart) {
+  document.onselectstart = function(e) {
+    if (!(opt_allowSelectStart && opt_allowSelectStart.call(this, e))) {
+      e.preventDefault();
+    }
+  };
+  document.ondragstart = function(e) {
+    if (!(opt_allowDragStart && opt_allowDragStart.call(this, e))) {
+      e.preventDefault();
+    }
+  };
+}
+/* #export */ function isRTL() {
+  return document.documentElement.dir == 'rtl';
+}
+
+/* #export */ function getRequiredElement(id) {
+  return assertInstanceof(
+      $(id), HTMLElement, 'Missing required element: ' + id);
+}
+
+/* #export */ function queryRequiredElement(selectors, opt_context) {
+  const element = (opt_context || document).querySelector(selectors);
+  return assertInstanceof(
+      element, HTMLElement, 'Missing required element: ' + selectors);
+}
+
+['click', 'auxclick'].forEach(function(eventName) {
+  document.addEventListener(eventName, function(e) {
+    if (e.button > 1) {
+      return;
+    } 
+    if (e.defaultPrevented) {
+      return;
+    }
+
+    const eventPath = e.path;
+    let anchor = null;
+    if (eventPath) {
+      for (let i = 0; i < eventPath.length; i++) {
+        const element = eventPath[i];
+        if (element.tagName === 'A' && element.href) {
+          anchor = element;
+          break;
+        }
+      }
+    }
+
+    let el = e.target;
+    if (!anchor && el.nodeType == Node.ELEMENT_NODE &&
+        el.webkitMatchesSelector('A, A *')) {
+      while (el.tagName != 'A') {
+        el = el.parentElement;
+      }
+      anchor = el;
+    }
+
+    if (!anchor) {
+      return;
+    }
+
+    anchor = (anchor);
+    if ((anchor.protocol == 'file:' || anchor.protocol == 'about:') &&
+        (e.button == 0 || e.button == 1)) {
+      chrome.send('navigateToUrl', [
+        anchor.href, anchor.target, e.button, e.altKey, e.ctrlKey, e.metaKey,
+        e.shiftKey
+      ]);
+      e.preventDefault();
+    }
+  });
+});
+
+/* #export */ function appendParam(url, key, value) {
+  const param = encodeURIComponent(key) + '=' + encodeURIComponent(value);
+
+  if (url.indexOf('?') == -1) {
+    return url + '?' + param;
+  }
+  return url + '&' + param;
+}
+
+/* #export */ function createElementWithClassName(type, className) {
+  const elm = document.createElement(type);
+  elm.className = className;
+  return elm;
+}
+
+/* #export */ function ensureTransitionEndEvent(el, opt_timeOut) {
+  if (opt_timeOut === undefined) {
+    const style = getComputedStyle(el);
+    opt_timeOut = parseFloat(style.transitionDuration) * 1000;
+    opt_timeOut += 50;
+  }
+
+  let fired = false;
+  el.addEventListener('transitionend', function f(e) {
+    el.removeEventListener('transitionend', f);
+    fired = true;
+  });
+  window.setTimeout(function() {
+    if (!fired) {
+      cr.dispatchSimpleEvent(el, 'transitionend', true);
+    }
+  }, opt_timeOut);
+}
+/* #export */ function scrollTopForDocument(doc) {
+  return doc.documentElement.scrollTop || doc.body.scrollTop;
+}
+
+/* #export */ function setScrollTopForDocument(doc, value) {
+  doc.documentElement.scrollTop = doc.body.scrollTop = value;
+}
+
+/* #export */ function scrollLeftForDocument(doc) {
+  return doc.documentElement.scrollLeft || doc.body.scrollLeft;
+}
+
+/* #export */ function setScrollLeftForDocument(doc, value) {
+  doc.documentElement.scrollLeft = doc.body.scrollLeft = value;
+}
+
+/* #export */ function HTMLEscape(original) {
+  return original.replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+}
+
+/* #export */ function elide(original, maxLength) {
+  if (original.length <= maxLength) {
+    return original;
+  }
+  return original.substring(0, maxLength - 1) + '\u2026';
+}
+
+/* #export */ function quoteString(str) {
+  return str.replace(/([\\\.\+\*\?\[\^\]\$\(\)\{\}\=\!\<\>\|\:])/g, '\\$1');
+}
+
+/* #export */ function listenOnce(target, eventNames, callback) {
+  if (!Array.isArray(eventNames)) {
+    eventNames = eventNames.split(/ +/);
+  }
+
+  const removeAllAndCallCallback = function(event) {
+    eventNames.forEach(function(eventName) {
+      target.removeEventListener(eventName, removeAllAndCallCallback, false);
+    });
+    return callback(event);
+  };
+
+  eventNames.forEach(function(eventName) {
+    target.addEventListener(eventName, removeAllAndCallCallback, false);
+  });
+}
+
+/* #export */ function hasKeyModifiers(e) {
+  return !!(e.altKey || e.ctrlKey || e.metaKey || e.shiftKey);
+}
+
+function isTextInputElement(el) {
+  return el.tagName == 'INPUT' || el.tagName == 'TEXTAREA';
+}
+</script>
+</body>
+</html>
